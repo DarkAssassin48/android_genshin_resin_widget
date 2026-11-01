@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-01",
+  "source_method": "Public mi18n JSON dictionaries used by the linked official HoYoLAB page bundles. No account data used.",
+  "sources": {
+    "genshin": {
+      "page_url": "https://act.hoyolab.com/app/community-game-records-sea/index.html?lang=ru-ru#/ys",
+      "dictionary_url": "https://fastcdn.hoyoverse.com/mi18n/bbs_oversea/m11241040191111/m11241040191111-ru-ru.json",
+      "dictionary_sha256": "3dd41df548f4e7af2e4efa00d91cd750f89f125fe4a0a4e5157c4e4542e4f334",
+      "dictionary_entries": 1299,
+      "english_dictionary_url": "https://fastcdn.hoyoverse.com/mi18n/bbs_oversea/m11241040191111/m11241040191111-en-us.json",
+      "english_dictionary_sha256": "12192935e071c35cb13f3ff607669e6426e57cd606c2c18d32aa4c3a4bdab7bf"
+    },
+    "hsr": {
+      "page_url": "https://act.hoyolab.com/app/community-game-records-sea/rpg/index.html?lang=ru-ru#/hsr",
+      "dictionary_url": "https://webstatic.hoyoverse.com/admin/mi18n/bbs_oversea/m20230509hy150knmyo/m20230509hy150knmyo-ru-ru.json",
+      "dictionary_sha256": "e4125b697334f1a8d0031fe3a53265e829710d3157a6a0e9994649bede975262",
+      "dictionary_entries": 674,
+      "english_dictionary_url": "https://webstatic.hoyoverse.com/admin/mi18n/bbs_oversea/m20230509hy150knmyo/m20230509hy150knmyo-en-us.json",
+      "english_dictionary_sha256": "911e244979006bf1e6237c744973d2e6cc513f3561b5c3983597feb2b8b5a802"
+    },
+    "zzz": {
+      "page_url": "https://act.hoyolab.com/app/zzz-game-record/index.html?lang=ru-ru#/zzz",
+      "dictionary_url": "https://fastcdn.hoyoverse.com/mi18n/nap_global/m20240410hy38foxb7k/m20240410hy38foxb7k-ru-ru.json",
+      "dictionary_sha256": "ac96f642dbec64ec2278cdd49677a819eebb1fff2edde22bf0c2becc2b1f63f7",
+      "dictionary_entries": 971,
+      "english_dictionary_url": "https://fastcdn.hoyoverse.com/mi18n/nap_global/m20240410hy38foxb7k/m20240410hy38foxb7k-en-us.json",
+      "english_dictionary_sha256": "5f8bd4665261db9cacac03e71656c211f82099d08ce714e3308b8314c06a2233"
+    }
+  },
+  "terms": [
+    {
+      "game": "genshin",
+      "source_key": "battle_chronicle",
+      "ru": "Боевые заслуги",
+      "en": "Battle Chronicle",
+      "exact_resources": [],
+      "related_resources": [
+        "dialog_msg_dailynote_not_public_error_repeat",
+        "msg_toast_dailynote_error_data_not_public",
+        "msg_toast_widget_refresh_error"
+      ],
+      "note": "Название раздела в сообщениях приложения."
+    },
+    {
+      "game": "genshin",
+      "source_key": "daily_resin",
+      "ru": "Первородная смола",
+      "en": "Original Resin",
+      "exact_resources": [
+        "resin",
+        "push_channel_name_resin",
+        "push_resin_noti_title"
+      ],
+      "related_resources": [
+        "widget_label_resin_fixed",
+        "widget_label_resin_resizable"
+      ],
+      "note": ""
+    },
+    {
+      "game": "genshin",
+      "source_key": "home_coin",
+      "ru": "Сокровища обители",
+      "en": "Realm Currency",
+      "exact_resources": [
+        "realm_currency",
+        "btn_home_coin_full",
+        "push_channel_name_realm_currency",
+        "push_realm_currency_title"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "genshin",
+      "source_key": "qualitative_rheometer",
+      "ru": "Параметрический преобразователь",
+      "en": "Parametric Transformer",
+      "exact_resources": [
+        "btn_param_reached",
+        "push_channel_name_param_trans",
+        "push_param_trans_title"
+      ],
+      "related_resources": [
+        "parametric_transformer"
+      ],
+      "note": "В компактном виджете используется сокращение «Преобразователь»."
+    },
+    {
+      "game": "genshin",
+      "source_key": "daily-task",
+      "ru": "Ежедневные поручения",
+      "en": "Daily Commissions",
+      "exact_resources": [
+        "push_channel_name_daily_commission",
+        "push_daily_commission_title"
+      ],
+      "related_resources": [
+        "daily_commissions"
+      ],
+      "note": "В виджете сокращено до «Поручения». В официальном словаре есть также варианты daily_task и daily_task_num: «Ежедневные задания»."
+    },
+    {
+      "game": "genshin",
+      "source_key": "daily_expedition",
+      "ru": "Экспедиции",
+      "en": "Dispatched Expeditions",
+      "exact_resources": [
+        "push_channel_name_expedition"
+      ],
+      "related_resources": [
+        "btn_expedition_done",
+        "expedition_time"
+      ],
+      "note": ""
+    },
+    {
+      "game": "genshin",
+      "source_key": "daily_remain_discount",
+      "ru": "Оставшиеся попытки сокращения расходов вдвое на этой неделе",
+      "en": "Remaining resin cost-halving opportunities this week",
+      "exact_resources": [],
+      "related_resources": [
+        "enemies_of_note",
+        "btn_weekly_boss_yet"
+      ],
+      "note": "Полная подпись HoYoLAB описывает оставшиеся скидки на получение наград. В приложении используется краткая категория еженедельных боссов."
+    },
+    {
+      "game": "genshin",
+      "source_key": "daily_title",
+      "ru": "Заметки в реальном времени",
+      "en": "Real-Time Notes",
+      "exact_resources": [],
+      "related_resources": [],
+      "note": "Название раздела на сайте Genshin Impact; общие сообщения приложения используют нейтральное «данные реального времени»."
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_stamina",
+      "ru": "Энергия Освоения",
+      "en": "Trailblaze Power",
+      "exact_resources": [
+        "trailblaze_power",
+        "push_channel_name_trail_power",
+        "push_trail_power_noti_title"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_reserve_stamina",
+      "ru": "Резервная энергия Освоения",
+      "en": "Reserved Trailblaze Power",
+      "exact_resources": [
+        "push_reserve_full_title"
+      ],
+      "related_resources": [
+        "reserve_trailblaze_power"
+      ],
+      "note": "В компактном виджете сокращено до «Резерв энергии»."
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_daily_training",
+      "ru": "Ежедневная тренировка",
+      "en": "Daily Training",
+      "exact_resources": [
+        "push_daily_training_title"
+      ],
+      "related_resources": [
+        "daily_training"
+      ],
+      "note": "В компактном виджете сокращено до «Тренировка»."
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_aftermath",
+      "ru": "Эхо войны",
+      "en": "Echo of War",
+      "exact_resources": [
+        "echo_of_war",
+        "push_echo_of_war_title"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_universe",
+      "ru": "Виртуальная вселенная",
+      "en": "Simulated Universe",
+      "exact_resources": [
+        "simulated_universe"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_universe_season",
+      "ru": "Расходящаяся вселенная",
+      "en": "Divergent Universe",
+      "exact_resources": [
+        "divergent_universe"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "hsr",
+      "source_key": "CWar.GamePlay",
+      "ru": "Валютные войны",
+      "en": "Currency Wars",
+      "exact_resources": [
+        "grid_fight"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_dispatch",
+      "ru": "Выполнение поручений",
+      "en": "Ongoing Assignments",
+      "exact_resources": [],
+      "related_resources": [
+        "assignment_time",
+        "btn_assignment_done"
+      ],
+      "note": "В приложении подписи дополнены временем или состоянием поручений."
+    },
+    {
+      "game": "hsr",
+      "source_key": "hsr_note_title",
+      "ru": "Текущая информация",
+      "en": "Real-Time Notes",
+      "exact_resources": [],
+      "related_resources": [],
+      "note": "Название раздела на сайте HSR; не подменяет общее название игровых данных для всех трёх игр."
+    },
+    {
+      "game": "zzz",
+      "source_key": "battery_num",
+      "ru": "Зарядка аккумулятора",
+      "en": "Battery Charge",
+      "exact_resources": [
+        "battery",
+        "push_battery_noti_title"
+      ],
+      "related_resources": [
+        "widget_label_battery",
+        "push_battery_noti_description"
+      ],
+      "note": "В сообщениях о количестве используется грамматическая форма «заряд аккумулятора достиг…»."
+    },
+    {
+      "game": "zzz",
+      "source_key": "bounty_commission",
+      "ru": "Призовые заказы",
+      "en": "Bounty Commissions",
+      "exact_resources": [
+        "push_bounty_commission_title",
+        "bounty_commission_progress"
+      ],
+      "related_resources": [
+        "btn_bounty_commission_yet",
+        "push_msg_bounty_commission_yet"
+      ],
+      "note": ""
+    },
+    {
+      "game": "zzz",
+      "source_key": "bounty_commission_progress",
+      "ru": "Прогресс призовых заказов",
+      "en": "Bounty Commission Progress",
+      "exact_resources": [],
+      "related_resources": [
+        "bounty_commission_progress"
+      ],
+      "note": "В компактном виджете оставлено название «Призовые заказы» без слова «Прогресс»."
+    },
+    {
+      "game": "zzz",
+      "source_key": "zzz_member",
+      "ru": "Интернот-подписка",
+      "en": "Inter-Knot Membership",
+      "exact_resources": [
+        "zzz_member_card",
+        "push_member_card_title"
+      ],
+      "related_resources": [
+        "btn_member_claim_yet",
+        "btn_member_expire_soon",
+        "push_msg_member_claim_yet",
+        "push_msg_member_expire_soon"
+      ],
+      "note": ""
+    },
+    {
+      "game": "zzz",
+      "source_key": "card",
+      "ru": "Счастливый билет",
+      "en": "Scratch Card Mania",
+      "exact_resources": [
+        "scratch_card"
+      ],
+      "related_resources": [
+        "scratch_card_done",
+        "scratch_card_no"
+      ],
+      "note": "Состояния согласованы с мужским родом слова «билет»."
+    },
+    {
+      "game": "zzz",
+      "source_key": "vhs_sale",
+      "ru": "Управление видеопрокатом",
+      "en": "Video Store Management",
+      "exact_resources": [],
+      "related_resources": [
+        "video_store_management"
+      ],
+      "note": "В компактном виджете сокращено до «Видеопрокат»."
+    },
+    {
+      "game": "zzz",
+      "source_key": "sales_no",
+      "ru": "Ожидается открытие",
+      "en": "Waiting to Open",
+      "exact_resources": [
+        "video_store_management_no"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "zzz",
+      "source_key": "sales_doing",
+      "ru": "Уже открыто",
+      "en": "Currently Open",
+      "exact_resources": [
+        "video_store_management_doing"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "zzz",
+      "source_key": "sales_done",
+      "ru": "Доступна выручка",
+      "en": "Revenue Available",
+      "exact_resources": [
+        "video_store_management_done"
+      ],
+      "related_resources": [],
+      "note": ""
+    },
+    {
+      "game": "zzz",
+      "source_key": "daily_task_active",
+      "ru": "Активность сегодня",
+      "en": "Engagement Today",
+      "exact_resources": [],
+      "related_resources": [
+        "engagement_today"
+      ],
+      "note": "В компактном виджете сокращено до «Активность»."
+    },
+    {
+      "game": "zzz",
+      "source_key": "weekly_task_point",
+      "ru": "Очки в Бинго Риду",
+      "en": "Ridu Weekly Points",
+      "exact_resources": [],
+      "related_resources": [
+        "ridu_weekly"
+      ],
+      "note": "В компактном виджете используется название «Бинго Риду», числовой прогресс отображается рядом."
+    },
+    {
+      "game": "zzz",
+      "source_key": "daily_note",
+      "ru": "Прямо сейчас",
+      "en": "Sticky Notes",
+      "exact_resources": [],
+      "related_resources": [],
+      "note": "Название раздела на сайте ZZZ; в английском словаре Sticky Notes."
+    }
+  ],
+  "not_verified": [
+    "Полный каталог русских имён персонажей отсутствует в исследованных словарях. Имена в PlayableCharacters.kt в этой правке не менялись.",
+    "Для названия COFF Café в исследованных словарях нет однозначного соответствия. Текущее название сохранено; исправлено согласование состояния «Не посещена»."
+  ]
+}

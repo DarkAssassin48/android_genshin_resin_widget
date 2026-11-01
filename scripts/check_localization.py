@@ -81,6 +81,16 @@ name_count = len(re.findall(r'name_ru\s*=\s*"[А-Яа-яЁё][^"]*"', chars))
 if char_count != name_count:
     errors.append(f'Missing Russian character names: {name_count}/{char_count}')
 
+official_label_count = 0
+reference_path = repo / 'localization/hoyolab-ru-terms.json'
+if reference_path.is_file():
+    reference = json.loads(reference_path.read_text(encoding='utf-8'))
+    for term in reference['terms']:
+        for name in term['exact_resources']:
+            official_label_count += 1
+            if name not in ru or ''.join(ru[name].itertext()) != term['ru']:
+                errors.append(f'Official HoYoLAB term mismatch: {name} ({term["game"]}:{term["source_key"]})')
+
 version_source = (repo / 'buildSrc/src/main/kotlin/dependency/Versions.kt').read_text(encoding='utf-8')
 version_name = re.search(r'const val versionName = "([^"]+)"', version_source)
 version_code = re.search(r'const val versionCode = (\d+)', version_source)
@@ -89,6 +99,7 @@ report = {
     'version_code': int(version_code[1]) if version_code else None,
     'russian_resources': len(ru),
     'russian_character_names': name_count,
+    'official_hoyolab_labels_checked': official_label_count,
     'checks': ['XML parsing', 'unique names', 'resource coverage', 'format argument positions and types', 'markup preservation', 'array lengths', 'Russian plural forms', 'character name coverage'],
     'errors': errors,
 }
