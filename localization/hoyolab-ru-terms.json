@@ -69,7 +69,9 @@
         "push_channel_name_realm_currency",
         "push_realm_currency_title"
       ],
-      "related_resources": [],
+      "related_resources": [
+        "noti_home_coin_full_short"
+      ],
       "note": ""
     },
     {
@@ -83,7 +85,8 @@
         "push_param_trans_title"
       ],
       "related_resources": [
-        "parametric_transformer"
+        "parametric_transformer",
+        "noti_param_reached_short"
       ],
       "note": "В компактном виджете используется сокращение «Преобразователь»."
     },
@@ -267,7 +270,8 @@
       ],
       "related_resources": [
         "btn_bounty_commission_yet",
-        "push_msg_bounty_commission_yet"
+        "push_msg_bounty_commission_yet",
+        "noti_bounty_commission_yet_short"
       ],
       "note": ""
     },
@@ -295,7 +299,9 @@
         "btn_member_claim_yet",
         "btn_member_expire_soon",
         "push_msg_member_claim_yet",
-        "push_msg_member_expire_soon"
+        "push_msg_member_expire_soon",
+        "noti_member_claim_yet_short",
+        "noti_member_expire_soon_short"
       ],
       "note": ""
     },

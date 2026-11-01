@@ -496,4 +496,25 @@
     <plurals name="times_count">
         <item quantity="other">%d회</item>
     </plurals>
+
+    <!-- Compact notification labels; full conditions remain in btn_* for accessibility. -->
+    <string name="noti_expedition_done_short">@string/btn_expedition_done</string>
+    <string name="noti_assignment_done_short">@string/btn_assignment_done</string>
+    <string name="noti_home_coin_full_short">@string/btn_home_coin_full</string>
+    <string name="noti_param_reached_short">@string/btn_param_reached</string>
+    <string name="noti_daily_commission_yet_short">@string/btn_daily_commission_yet</string>
+    <string name="noti_weekly_boss_yet_short">@string/btn_weekly_boss_yet</string>
+    <string name="noti_daily_training_yet_short">@string/btn_daily_training_yet</string>
+    <string name="noti_echo_of_war_yet_short">@string/btn_echo_of_war_yet</string>
+    <string name="noti_engagement_yet_short">@string/btn_engagement_yet</string>
+    <string name="noti_bounty_commission_yet_short">@string/btn_bounty_commission_yet</string>
+    <string name="noti_reserve_full_short">@string/btn_reserve_full</string>
+    <string name="noti_period_score_yet_short">@string/btn_period_score_yet</string>
+    <string name="noti_member_claim_yet_short">@string/btn_member_claim_yet</string>
+    <string name="noti_member_expire_soon_short">@string/btn_member_expire_soon</string>
+    <string name="noti_cafe_yet_short">@string/btn_cafe_yet</string>
+
+    <string name="design_tab_stamina">자원</string>
+    <string name="design_tab_detail">상세</string>
+    <string name="design_tab_talent">특성</string>
 </resources>

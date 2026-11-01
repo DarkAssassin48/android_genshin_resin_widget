@@ -390,7 +390,8 @@
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/tv_assignment_time"
                     android:layout_toRightOf="@id/iv_credit"
-                    android:singleLine="true"
+                    android:singleLine="false"
+                    android:maxLines="2"
                     android:text="@string/until_assignment_done"
                     android:textColor="@color/widget_font_main"
                     android:textSize="12sp" />

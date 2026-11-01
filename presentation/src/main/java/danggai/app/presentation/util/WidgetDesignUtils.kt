@@ -19,8 +19,16 @@ import danggai.app.presentation.util.CommonFunction.isDarkMode
 import danggai.domain.local.DetailWidgetDesignSettings
 import danggai.domain.local.ResinWidgetDesignSettings
 import danggai.domain.util.Constant
+import java.text.SimpleDateFormat
+import java.util.Date
 
 object WidgetDesignUtils {
+    fun setPreviewSyncTime(root: View) {
+        val locale = root.resources.configuration.locales[0]
+        val pattern = if (locale.language == "ru") "dd.MM HH:mm" else Constant.DATE_FORMAT_SYNC_DATE_TIME
+        root.findViewById<TextView>(R.id.tv_sync_time)?.text = SimpleDateFormat(pattern, locale).format(Date())
+    }
+
     fun isDarkTheme(context: Context, widgetTheme: Int) = when (widgetTheme) {
         Constant.PREF_WIDGET_THEME_DARK -> true
         Constant.PREF_WIDGET_THEME_LIGHT -> false

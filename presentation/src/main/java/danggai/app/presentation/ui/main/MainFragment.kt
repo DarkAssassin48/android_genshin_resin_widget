@@ -162,8 +162,11 @@ class MainFragment : BindingFragment<FragmentMainBinding, MainViewModel>() {
         binding.vm = mVM
         binding.vm?.setCommonFun()
 
-        if (!BuildConfig.DEBUG && !BuildConfig.RU_TEST)
+        if (!BuildConfig.DEBUG && !BuildConfig.RU_TEST) {
             initAd()
+        } else {
+            binding.adView.visibility = View.GONE
+        }
 
         initSf()
         binding.main.layoutTransition?.enableTransitionType(LayoutTransition.CHANGING)

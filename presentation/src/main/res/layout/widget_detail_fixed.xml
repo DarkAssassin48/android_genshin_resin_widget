@@ -351,7 +351,8 @@
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/tv_expedition_time"
                     android:layout_toRightOf="@id/iv_warp"
-                    android:singleLine="true"
+                    android:singleLine="false"
+                    android:maxLines="2"
                     android:text="@string/until_expeditions_done"
                     android:textColor="@color/widget_font_main"
                     android:textSize="12sp" />

@@ -45,6 +45,9 @@ class WidgetDesignResinFragment : BindingFragment<FragmentWidgetDesignResinBindi
     }
 
     private fun initUi() {
+        listOf(binding.widget.root, binding.widgetHonkaiSr.root, binding.widgetZzz.root).forEach {
+            WidgetDesignUtils.setPreviewSyncTime(it)
+        }
         binding.widget.let {
             it.pbLoading.visibility = View.GONE
             it.ivResin.visibility = View.VISIBLE

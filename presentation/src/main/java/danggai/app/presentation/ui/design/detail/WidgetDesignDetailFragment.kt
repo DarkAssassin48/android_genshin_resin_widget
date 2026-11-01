@@ -50,6 +50,9 @@ class WidgetDesignDetailFragment :
     }
 
     private fun initUi() {
+        listOf(binding.widget.root, binding.widgetHksr.root, binding.widgetZzz.root).forEach {
+            WidgetDesignUtils.setPreviewSyncTime(it)
+        }
         binding.widget.let {
             it.pbLoading.visibility = View.GONE
             it.llDisable.visibility = View.GONE

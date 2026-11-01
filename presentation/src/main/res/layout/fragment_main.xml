@@ -197,6 +197,7 @@
                                 style="@style/TextView"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                android:maxLines="2"
                                 android:text="@string/noti_time_daily"
                                 android:textColor="@color/on_surface"
                                 android:textSize="16sp" />
@@ -216,6 +217,7 @@
                                 style="@style/TextView"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                android:maxLines="2"
                                 android:text="@string/noti_time_weekly"
                                 android:textColor="@color/on_surface"
                                 android:textSize="16sp" />
@@ -321,33 +323,38 @@
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipGenshin"
                                             android:checked="@={vm.sfEnableNotiExpeditionDone}"
-                                            android:text="@string/btn_expedition_done"
+                                            android:text="@string/noti_expedition_done_short"
+                                            android:contentDescription="@string/btn_expedition_done"
                                             app:chipIcon="@drawable/icon_warp_point" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipGenshin"
                                             android:checked="@={vm.sfEnableNotiHomeCoinFull}"
-                                            android:text="@string/btn_home_coin_full"
+                                            android:text="@string/noti_home_coin_full_short"
+                                            android:contentDescription="@string/btn_home_coin_full"
                                             app:chipIcon="@drawable/icon_serenitea_pot" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipGenshin"
                                             android:checked="@={vm.sfEnableNotiParamReach}"
-                                            android:text="@string/btn_param_reached"
+                                            android:text="@string/noti_param_reached_short"
+                                            android:contentDescription="@string/btn_param_reached"
                                             app:chipIcon="@drawable/icon_parametric_transformer" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipGenshin"
                                             android:checked="@={vm.sfEnableNotiDailyYet}"
                                             android:onClick="@{() -> vm.onClickDailyCommissionYetNoti()}"
-                                            android:text="@string/btn_daily_commission_yet"
+                                            android:text="@string/noti_daily_commission_yet_short"
+                                            android:contentDescription="@string/btn_daily_commission_yet"
                                             app:chipIcon="@drawable/icon_daily_commission" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipGenshin"
                                             android:checked="@={vm.sfEnableNotiWeeklyYet}"
                                             android:onClick="@{() -> vm.onClickWeeklyBossYetNoti()}"
-                                            android:text="@string/btn_weekly_boss_yet"
+                                            android:text="@string/noti_weekly_boss_yet_short"
+                                            android:contentDescription="@string/btn_weekly_boss_yet"
                                             app:chipIcon="@drawable/icon_domain" />
                                     </com.google.android.material.chip.ChipGroup>
 
@@ -442,31 +449,36 @@
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipHonkaiSr"
                                             android:checked="@={vm.sfEnableNotiHonkaiSrExpeditionDone}"
-                                            android:text="@string/btn_assignment_done"
+                                            android:text="@string/noti_assignment_done_short"
+                                            android:contentDescription="@string/btn_assignment_done"
                                             app:chipIcon="@drawable/icon_warp_point" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipHonkaiSr"
                                             android:checked="@={vm.sfEnableNotiReserveFullHonkaiSr}"
-                                            android:text="@string/btn_reserve_full"
+                                            android:text="@string/noti_reserve_full_short"
+                                            android:contentDescription="@string/btn_reserve_full"
                                             app:chipIcon="@drawable/icon_reserved_trailblaze_power" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipHonkaiSr"
                                             android:checked="@={vm.sfEnableNotiDailyYetHonkaiSr}"
-                                            android:text="@string/btn_daily_training_yet"
+                                            android:text="@string/noti_daily_training_yet_short"
+                                            android:contentDescription="@string/btn_daily_training_yet"
                                             app:chipIcon="@drawable/icon_activity_chip" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipHonkaiSr"
                                             android:checked="@={vm.sfEnableNotiWeeklyYetHonkaiSr}"
-                                            android:text="@string/btn_echo_of_war_yet"
+                                            android:text="@string/noti_echo_of_war_yet_short"
+                                            android:contentDescription="@string/btn_echo_of_war_yet"
                                             app:chipIcon="@drawable/icon_echo_of_war" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipHonkaiSr"
                                             android:checked="@={vm.sfEnableNotiPeriodScoreHonkaiSr}"
-                                            android:text="@string/btn_period_score_yet"
+                                            android:text="@string/noti_period_score_yet_short"
+                                            android:contentDescription="@string/btn_period_score_yet"
                                             app:chipIcon="@drawable/icon_simulated_universe"
                                             app:chipIconTint="@color/on_surface" />
                                     </com.google.android.material.chip.ChipGroup>
@@ -569,25 +581,29 @@
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipZzz"
                                             android:checked="@={vm.sfEnableNotiDailyYetZZZ}"
-                                            android:text="@string/btn_engagement_yet"
+                                            android:text="@string/noti_engagement_yet_short"
+                                            android:contentDescription="@string/btn_engagement_yet"
                                             app:chipIcon="@drawable/icon_fire" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipZzz"
                                             android:checked="@={vm.sfEnableNotiWeeklyYetZZZ}"
-                                            android:text="@string/btn_bounty_commission_yet"
+                                            android:text="@string/noti_bounty_commission_yet_short"
+                                            android:contentDescription="@string/btn_bounty_commission_yet"
                                             app:chipIcon="@drawable/icon_investigation_point" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipZzz"
                                             android:checked="@={vm.sfEnableNotiMemberClaimZZZ}"
-                                            android:text="@string/btn_member_claim_yet"
+                                            android:text="@string/noti_member_claim_yet_short"
+                                            android:contentDescription="@string/btn_member_claim_yet"
                                             app:chipIcon="@drawable/icon_polychrome" />
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipZzz"
                                             android:checked="@={vm.sfEnableNotiCafeZZZ}"
-                                            android:text="@string/btn_cafe_yet"
+                                            android:text="@string/noti_cafe_yet_short"
+                                            android:contentDescription="@string/btn_cafe_yet"
                                             app:chipIcon="@drawable/icon_coffee" />
                                     </com.google.android.material.chip.ChipGroup>
 
@@ -595,8 +611,12 @@
 
                                         <com.google.android.material.chip.Chip
                                             style="@style/NotiChipZzz"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:ellipsize="end"
                                             android:checked="@={vm.sfEnableNotiMemberExpireZZZ}"
-                                            android:text="@string/btn_member_expire_soon"
+                                            android:text="@string/noti_member_expire_soon_short"
+                                            android:contentDescription="@string/btn_member_expire_soon"
                                             app:chipIcon="@drawable/icon_polychrome" />
 
                                         <androidx.appcompat.widget.AppCompatSpinner
@@ -631,16 +651,16 @@
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextView"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_marginEnd="14dp"
-                            android:layout_weight="1"
                             android:text="@string/check_in"
                             android:textColor="@color/on_surface"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <com.google.android.material.chip.ChipGroup
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             app:chipSpacingHorizontal="8dp"
                             app:chipSpacingVertical="4dp">

@@ -93,7 +93,12 @@ class WidgetDesignFragment : BindingFragment<FragmentWidgetDesignBinding, Widget
         binding.vpMain.adapter = pagerAdapter
 
         TabLayoutMediator(binding.tlTop, binding.vpMain) { tab, position ->
-            tab.text = DesignTabType.fromPosition(position).title
+            tab.setText(when (DesignTabType.fromPosition(position)) {
+                DesignTabType.STAMINA -> R.string.design_tab_stamina
+                DesignTabType.DETAIL -> R.string.design_tab_detail
+                DesignTabType.TALENT -> R.string.design_tab_talent
+                DesignTabType.UNKNOWN -> error("Unknown design tab: $position")
+            })
         }.attach()
     }
 

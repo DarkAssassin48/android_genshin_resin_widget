@@ -285,7 +285,7 @@
     <string name="widget_label_battery">Виджет зарядки аккумулятора</string>
     <string name="widget_label_zzz_detail">Подробный виджет ZZZ</string>
     <string name="widget_ui_simple_time">%1$d ч %2$d мин</string>
-    <string name="widget_ui_remain_time">Осталось %1$d ч %2$d мин</string>
+    <string name="widget_ui_remain_time">%1$d ч %2$d мин</string>
     <string name="widget_format_max_time">Заполнится в %1$02d:%2$02d</string>
     <string name="widget_format_done_time">Завершится в %1$02d:%2$02d</string>
     <string name="widget_format_under_expedition">В экспедиции</string>
@@ -391,8 +391,8 @@
         <item>3 дня</item>
         <item>7 дней</item>
     </string-array>
-    <string name="noti_time_daily">Время ежедневного напоминания</string>
-    <string name="noti_time_weekly">День и время еженедельного напоминания</string>
+    <string name="noti_time_daily">Ежедневно</string>
+    <string name="noti_time_weekly">Еженедельно</string>
     <string name="btn_use_game">Использовать эту игру</string>
     <string name="change_language">Язык</string>
     <string name="common">Общие настройки</string>
@@ -403,4 +403,25 @@
     <string name="msg_toast_how_to_relogin">Войдите снова в нужный аккаунт. Его данные обновятся автоматически.</string>
     <string name="msg_toast_relogin_success">Вход выполнен! Обновляем данные.</string>
     <string name="msg_toast_relogin_wrong_account">Это другой аккаунт HoYoLAB. Войдите в аккаунт с истёкшим сроком входа.</string>
+
+    <!-- Compact notification labels; full conditions remain in btn_* for accessibility. -->
+    <string name="noti_expedition_done_short">Конец экспедиций</string>
+    <string name="noti_assignment_done_short">Конец поручений</string>
+    <string name="noti_home_coin_full_short">Сокровища обители</string>
+    <string name="noti_param_reached_short">Преобразователь</string>
+    <string name="noti_daily_commission_yet_short">Поручения остались</string>
+    <string name="noti_weekly_boss_yet_short">Скидки на боссов</string>
+    <string name="noti_daily_training_yet_short">Тренировка</string>
+    <string name="noti_echo_of_war_yet_short">Эхо войны</string>
+    <string name="noti_engagement_yet_short">Активность</string>
+    <string name="noti_bounty_commission_yet_short">Призовые заказы</string>
+    <string name="noti_reserve_full_short">Полный резерв</string>
+    <string name="noti_period_score_yet_short">Очки за цикл</string>
+    <string name="noti_member_claim_yet_short">Награда подписки</string>
+    <string name="noti_member_expire_soon_short">Конец подписки</string>
+    <string name="noti_cafe_yet_short">Кофейня COFF</string>
+
+    <string name="design_tab_stamina">Ресурсы</string>
+    <string name="design_tab_detail">Сводка</string>
+    <string name="design_tab_talent">Таланты</string>
 </resources>
