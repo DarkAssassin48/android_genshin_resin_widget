@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException
+import danggai.domain.local.DetailWidgetDesignSettings
 import danggai.domain.util.Constant
 import org.json.JSONArray
 import org.json.JSONException
@@ -16,9 +17,26 @@ object PreferenceManager {
     private const val DEFAULT_VALUE_INT = -1
     private const val DEFAULT_VALUE_LONG = -1L
     private const val DEFAULT_VALUE_FLOAT = -1f
+    private const val RU_TEST_COMPACT_DETAIL_FONT_APPLIED = "RU_TEST_COMPACT_DETAIL_FONT_APPLIED"
 
     fun getPreferences(context: Context): SharedPreferences {
         return context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE)
+    }
+
+    /** Returns true once so widgets also refresh when the old size was never saved. */
+    fun migrateRuTestDetailWidgetFontSize(context: Context): Boolean {
+        val prefs = getPreferences(context)
+        if (prefs.getBoolean(RU_TEST_COMPACT_DETAIL_FONT_APPLIED, false)) return false
+
+        val saved = getT<DetailWidgetDesignSettings>(context, Constant.PREF_DETAIL_WIDGET_DESIGN_SETTINGS)
+        val updated = saved?.takeIf { it.fontSize != Constant.PREF_DEFAULT_WIDGET_DETAIL_FONT_SIZE }
+        val editor = prefs.edit()
+        if (updated != null) {
+            val compact = updated.copy(fontSize = Constant.PREF_DEFAULT_WIDGET_DETAIL_FONT_SIZE)
+            editor.putString(Constant.PREF_DETAIL_WIDGET_DESIGN_SETTINGS, GsonBuilder().create().toJson(compact))
+        }
+        editor.putBoolean(RU_TEST_COMPACT_DETAIL_FONT_APPLIED, true).apply()
+        return true
     }
 
     /**

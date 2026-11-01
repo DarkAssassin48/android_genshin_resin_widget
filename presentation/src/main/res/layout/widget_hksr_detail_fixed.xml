@@ -100,7 +100,7 @@
                     android:singleLine="true"
                     android:text="@string/trailblaze_power"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_trailblaze_power"
@@ -110,7 +110,7 @@
                     android:singleLine="true"
                     android:text="300/300"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -128,7 +128,7 @@
                     android:singleLine="true"
                     android:text="@string/until_fully_replenished"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_trailblaze_power_time"
@@ -137,7 +137,7 @@
                     android:singleLine="true"
                     android:text="0h 0m"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -165,7 +165,7 @@
                     android:singleLine="true"
                     android:text="@string/reserve_trailblaze_power"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_reserve_trailblaze_power"
@@ -175,7 +175,7 @@
                     android:singleLine="true"
                     android:text="0"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -204,7 +204,7 @@
                     android:singleLine="true"
                     android:text="@string/daily_training"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_daily_training"
@@ -214,7 +214,7 @@
                     android:singleLine="true"
                     android:text="500/500"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
 
             </RelativeLayout>
@@ -243,7 +243,7 @@
                     android:singleLine="true"
                     android:text="@string/echo_of_war"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_echo_of_war"
@@ -253,7 +253,7 @@
                     android:singleLine="true"
                     android:text="3 times"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -280,7 +280,7 @@
                     android:singleLine="true"
                     android:text="@string/simulated_universe"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_simulated_universe"
@@ -290,7 +290,7 @@
                     android:singleLine="true"
                     android:text="0/14000"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="11sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -317,7 +317,7 @@
                     android:singleLine="true"
                     android:text="@string/grid_fight"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_grid_fight"
@@ -327,7 +327,7 @@
                     android:singleLine="true"
                     android:text="18000/18000"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="11sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -354,7 +354,7 @@
                     android:singleLine="true"
                     android:text="@string/divergent_universe"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
 
                 <TextView
@@ -365,7 +365,7 @@
                     android:singleLine="true"
                     android:text="1000/1000"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="11sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -394,7 +394,7 @@
                     android:maxLines="2"
                     android:text="@string/until_assignment_done"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_assignment_time"
@@ -404,7 +404,7 @@
                     android:singleLine="true"
                     android:text="0h 0m"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 

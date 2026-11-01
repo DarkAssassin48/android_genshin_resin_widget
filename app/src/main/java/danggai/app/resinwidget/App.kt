@@ -7,6 +7,7 @@ import androidx.work.Configuration
 import com.google.firebase.FirebaseApp
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.HiltAndroidApp
+import danggai.app.presentation.util.CommonFunction
 import danggai.app.presentation.util.LocaleWrapper
 import danggai.app.presentation.util.PreferenceManager
 import danggai.app.presentation.util.log
@@ -30,6 +31,10 @@ class App : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
+
+        if (BuildConfig.RU_TEST && PreferenceManager.migrateRuTestDetailWidgetFontSize(this)) {
+            CommonFunction.sendBroadcastAllWidgetRefreshUI(this)
+        }
 
         // Crashlytics
         if (!BuildConfig.RU_TEST) {

@@ -78,7 +78,7 @@
                     android:singleLine="true"
                     android:text="@string/resin"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_resin"
@@ -88,7 +88,7 @@
                     android:singleLine="true"
                     android:text="200/200"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -106,7 +106,7 @@
                     android:singleLine="true"
                     android:text="@string/until_fully_replenished"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_resin_time"
@@ -115,7 +115,7 @@
                     android:singleLine="true"
                     android:text="0h 0m"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -145,7 +145,7 @@
                     android:singleLine="true"
                     android:text="@string/daily_commissions"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_daily_commission"
@@ -155,7 +155,7 @@
                     android:singleLine="true"
                     android:text="4/4"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
 
             </RelativeLayout>
@@ -184,7 +184,7 @@
                     android:singleLine="true"
                     android:text="@string/enemies_of_note"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_weekly_boss"
@@ -194,7 +194,7 @@
                     android:singleLine="true"
                     android:text="3 times"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -222,7 +222,7 @@
                     android:singleLine="true"
                     android:text="@string/realm_currency"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_realm_currency"
@@ -232,7 +232,7 @@
                     android:singleLine="true"
                     android:text="2400/2400"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -250,7 +250,7 @@
                     android:singleLine="true"
                     android:text="@string/until_fully_replenished"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_realm_currency_time"
@@ -259,7 +259,7 @@
                     android:singleLine="true"
                     android:text="0h 0m"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -287,7 +287,7 @@
                     android:singleLine="true"
                     android:text="@string/parametric_transformer"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_transformer"
@@ -297,7 +297,7 @@
                     android:singleLine="true"
                     android:text="@string/widget_ui_transformer_not_reached"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -316,13 +316,13 @@
             <!--                    android:singleLine="true"-->
             <!--                    android:text="@string/until_reusable"-->
             <!--                    android:textColor="@color/widget_font_main"-->
-            <!--                    android:textSize="12sp" />-->
+            <!--                    android:textSize="@dimen/widget_detail_text_size" />-->
 
             <!--                <TextView-->
             <!--                    style="@style/TextView"-->
             <!--                    android:id="@+id/tv_transformer_time"-->
             <!--                    android:text="0d 0h 0m"-->
-            <!--                    android:textSize="12sp"-->
+            <!--                    android:textSize="@dimen/widget_detail_text_size"-->
             <!--                    android:textColor="@color/widget_font_main"-->
             <!--                    android:layout_alignParentRight="true"-->
             <!--                    android:singleLine="true"-->
@@ -355,7 +355,7 @@
                     android:maxLines="2"
                     android:text="@string/until_expeditions_done"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
                 <TextView
                     android:id="@+id/tv_expedition_time"
@@ -365,7 +365,7 @@
                     android:singleLine="true"
                     android:text="0h 0m"
                     android:textColor="@color/widget_font_main"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/widget_detail_text_size" />
 
             </RelativeLayout>
 
@@ -384,13 +384,13 @@
             <!--                    android:singleLine="true"-->
             <!--                    android:text="@string/until_all_completed"-->
             <!--                    android:textColor="@color/widget_font_main"-->
-            <!--                    android:textSize="12sp" />-->
+            <!--                    android:textSize="@dimen/widget_detail_text_size" />-->
 
             <!--                <TextView-->
             <!--                    style="@style/TextView"-->
             <!--                    android:id="@+id/tv_expedition_time"-->
             <!--                    android:text="0h 0m"-->
-            <!--                    android:textSize="12sp"-->
+            <!--                    android:textSize="@dimen/widget_detail_text_size"-->
             <!--                    android:textColor="@color/widget_font_main"-->
             <!--                    android:layout_alignParentRight="true"-->
             <!--                    android:singleLine="true"-->
