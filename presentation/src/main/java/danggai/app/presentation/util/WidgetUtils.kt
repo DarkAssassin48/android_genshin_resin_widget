@@ -14,6 +14,9 @@ import java.util.Objects
 
 object WidgetUtils {
 
+    fun packageAction(context: Context, action: String): String =
+        context.packageName + action.removePrefix("danggai.app.resinwidget")
+
     /**
      * 같은 인텐트(액션/컴포넌트/extras)와 뷰는 항상 같은 코드가 나오도록 만든다.
      * 갱신할 때마다 새 PendingIntent가 쌓이지 않고, extras(위젯 id 등)가 다른 인텐트끼리는 구분된다.
@@ -86,12 +89,12 @@ object WidgetUtils {
 
     fun <T : AppWidgetProvider> getUpdateIntent(context: Context, widgetClass: Class<T>) =
         Intent(context, widgetClass).apply {
-            action = Constant.ACTION_RESIN_WIDGET_REFRESH_DATA
+            action = WidgetUtils.packageAction(context, Constant.ACTION_RESIN_WIDGET_REFRESH_DATA)
         }
 
     fun getTalentRefreshIntent(context: Context) =
         Intent(context, TalentWidget::class.java).apply {
-            action = Constant.ACTION_TALENT_WIDGET_REFRESH
+            action = WidgetUtils.packageAction(context, Constant.ACTION_TALENT_WIDGET_REFRESH)
         }
 
     fun <T : AppWidgetProvider> getToastIntent(
@@ -100,7 +103,7 @@ object WidgetUtils {
         widgetClass: Class<T>
     ) =
         Intent(context, widgetClass).apply {
-            action = Constant.ACTION_SHOW_TOAST
+            action = WidgetUtils.packageAction(context, Constant.ACTION_SHOW_TOAST)
             this.putExtra(Constant.EXTRA_TOAST_MESSAGE, toastMsg)
         }
 

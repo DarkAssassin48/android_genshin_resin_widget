@@ -17,6 +17,7 @@ import danggai.app.presentation.extension.repeatOnLifeCycleStarted
 import danggai.app.presentation.ui.widget.MiniWidget
 import danggai.app.presentation.ui.widget.TalentWidget
 import danggai.app.presentation.util.PreferenceManager
+import danggai.app.presentation.util.WidgetUtils
 import danggai.app.presentation.util.log
 import danggai.domain.util.Constant
 import kotlinx.coroutines.launch
@@ -106,7 +107,7 @@ class WidgetConfigFragment : BindingFragment<FragmentWidgetConfigBinding, Widget
                         val widgetClass = Class.forName(widgetClassName)
 
                         val updateIntent = Intent(act.applicationContext, widgetClass).apply {
-                            action = Constant.ACTION_RESIN_WIDGET_REFRESH_DATA
+                            action = WidgetUtils.packageAction(act, Constant.ACTION_RESIN_WIDGET_REFRESH_DATA)
                             putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
                             putExtra("uid", mVM.getUid(account))
                             putExtra("name", mVM.getNickname(account))

@@ -6,6 +6,7 @@
 - **[Русские строки интерфейса](presentation/src/main/res/values-ru/strings.xml)**.
 - **[Русские имена персонажей](presentation/src/main/java/danggai/app/presentation/util/PlayableCharacters.kt)** — поля `name_ru`.
 - Проверка без Android SDK: `python scripts/check_localization.py`.
+- **[Отдельная тестовая сборка RU Test](docs/RU_TEST.md)** — установка рядом с официальным приложением и обновление следующих тестовых версий.
 
 Исходный проект: [danggai/android_genshin_resin_widget](https://github.com/danggai/android_genshin_resin_widget). Релизы и отправка изменений в исходный проект не настроены. Ветка `master` сохранена как основа исходного проекта.
 

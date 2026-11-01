@@ -162,7 +162,7 @@ class MainFragment : BindingFragment<FragmentMainBinding, MainViewModel>() {
         binding.vm = mVM
         binding.vm?.setCommonFun()
 
-        if (!BuildConfig.DEBUG)
+        if (!BuildConfig.DEBUG && !BuildConfig.RU_TEST)
             initAd()
 
         initSf()

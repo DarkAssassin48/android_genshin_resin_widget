@@ -128,7 +128,7 @@ object CommonFunction {
     }
 
     fun sendCrashlyticsApiLog(apiName: String, metaCode: Int?, retCode: String?) {
-        if (BuildConfig.DEBUG) return
+        if (BuildConfig.DEBUG || BuildConfig.RU_TEST) return
 
         log.e()
         val keysAndValues = CustomKeysAndValues.Builder()

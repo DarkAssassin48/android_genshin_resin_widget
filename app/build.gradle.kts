@@ -9,6 +9,10 @@ plugins {
     id("com.google.firebase.crashlytics")
 }
 
+val ruTestVersionCode = providers.gradleProperty("ruTestVersionCode").orElse("1").get().toInt()
+require(ruTestVersionCode in 1..2100000000)
+val ruTestVersionName = "${Versions.versionName}-ru-test.$ruTestVersionCode"
+
 android {
     compileSdk = Versions.compileSdk
     compileSdkVersion = Versions.compileSdkString
@@ -19,6 +23,7 @@ android {
         targetSdk = Versions.compileSdk
         versionCode = Versions.versionCode
         versionName = Versions.versionName
+        buildConfigField("boolean", "RU_TEST", "false")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,6 +45,15 @@ android {
             buildConfigField("long", "VERSION_CODE", "${Versions.versionCode}")
             buildConfigField("String", "VERSION_NAME", "\"${Versions.versionName}\"")
         }
+        create("ruTest") {
+            initWith(getByName("release"))
+            applicationIdSuffix = ".rutest"
+            matchingFallbacks += listOf("release")
+            signingConfig = null // Signed locally with the persistent RU test key.
+            buildConfigField("boolean", "RU_TEST", "true")
+            buildConfigField("long", "VERSION_CODE", "$ruTestVersionCode")
+            buildConfigField("String", "VERSION_NAME", "\"$ruTestVersionName\"")
+        }
     }
 
     compileOptions {
@@ -60,6 +74,22 @@ android {
     namespace = "danggai.app.resinwidget"
     kapt {
         correctErrorTypes = true
+    }
+}
+
+androidComponents {
+    onVariants(selector().withBuildType("ruTest")) { variant ->
+        variant.outputs.forEach { output ->
+            output.versionCode.set(ruTestVersionCode)
+            output.versionName.set(ruTestVersionName)
+        }
+    }
+}
+
+// This separate app does not use the upstream Firebase project or upload mappings.
+tasks.configureEach {
+    if (name == "processRuTestGoogleServices" || name == "uploadCrashlyticsMappingFileRuTest") {
+        enabled = false
     }
 }
 

@@ -13,6 +13,7 @@ android {
     defaultConfig {
         minSdk = Versions.minSdk
         targetSdk = Versions.compileSdk
+        buildConfigField("boolean", "RU_TEST", "false")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,6 +31,14 @@ android {
         getByName("debug") {
             buildConfigField("long", "VERSION_CODE", "${Versions.versionCode}")
             buildConfigField("String", "VERSION_NAME", "\"${Versions.versionName}\"")
+        }
+        create("ruTest") {
+            initWith(getByName("release"))
+            matchingFallbacks += listOf("release")
+            val testCode = providers.gradleProperty("ruTestVersionCode").orElse("1").get().toInt()
+            buildConfigField("boolean", "RU_TEST", "true")
+            buildConfigField("long", "VERSION_CODE", "$testCode")
+            buildConfigField("String", "VERSION_NAME", "\"${Versions.versionName}-ru-test.$testCode\"")
         }
     }
     compileOptions {

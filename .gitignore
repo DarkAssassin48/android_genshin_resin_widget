@@ -18,3 +18,4 @@ app/release/
 .idea/
 buildSrc/build/
 tools/
+/artifacts/

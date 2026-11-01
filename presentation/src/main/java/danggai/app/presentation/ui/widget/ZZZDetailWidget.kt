@@ -74,7 +74,7 @@ class ZZZDetailWidget() : AppWidgetProvider() {
         }
 
         when (action) {
-            Constant.ACTION_RESIN_WIDGET_REFRESH_DATA,
+            WidgetUtils.packageAction(context, Constant.ACTION_RESIN_WIDGET_REFRESH_DATA),
             Constant.ACTION_ON_BOOT_COMPLETED -> {
                 log.e("REFRESH_DATA")
                 setWidgetRefreshing(context, appWidgetManager, appWidgetIds)

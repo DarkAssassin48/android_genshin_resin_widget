@@ -8,7 +8,9 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.HiltAndroidApp
 import danggai.app.presentation.util.LocaleWrapper
+import danggai.app.presentation.util.PreferenceManager
 import danggai.app.presentation.util.log
+import danggai.domain.util.Constant
 import io.reactivex.exceptions.UndeliverableException
 import io.reactivex.plugins.RxJavaPlugins
 import java.io.IOException
@@ -30,9 +32,10 @@ class App : Application(), Configuration.Provider {
         super.onCreate()
 
         // Crashlytics
-        FirebaseApp.initializeApp(this)
-
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        if (!BuildConfig.RU_TEST) {
+            FirebaseApp.initializeApp(this)
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        }
 
         RxJavaPlugins.setErrorHandler { e ->
             if (e is UndeliverableException) {
@@ -52,6 +55,9 @@ class App : Application(), Configuration.Provider {
     }
 
     override fun attachBaseContext(baseContext: Context) {
+        if (BuildConfig.RU_TEST && PreferenceManager.getString(baseContext, Constant.PREF_LOCALE, "").isBlank()) {
+            PreferenceManager.setString(baseContext, Constant.PREF_LOCALE, Constant.Locale.RUSSIAN.locale)
+        }
         super.attachBaseContext(LocaleWrapper.wrap(baseContext))
     }
 }

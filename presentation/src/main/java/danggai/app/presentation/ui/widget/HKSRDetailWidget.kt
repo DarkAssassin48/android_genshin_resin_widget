@@ -95,14 +95,14 @@ class HKSRDetailWidget() : AppWidgetProvider() {
         }
 
         when (action) {
-            Constant.ACTION_RESIN_WIDGET_REFRESH_DATA,
+            WidgetUtils.packageAction(context, Constant.ACTION_RESIN_WIDGET_REFRESH_DATA),
             Constant.ACTION_ON_BOOT_COMPLETED -> {
                 log.e("REFRESH_DATA")
                 setWidgetRefreshing(context, appWidgetManager, appWidgetIds)
                 context.let { RefreshWorker.startWorkerPeriodic(context) }
             }
 
-            Constant.ACTION_SHOW_TOAST -> {
+            WidgetUtils.packageAction(context, Constant.ACTION_SHOW_TOAST) -> {
                 log.e("SHOW_TOAST")
                 val message = intent.getStringExtra(Constant.EXTRA_TOAST_MESSAGE)
 
