@@ -297,11 +297,13 @@ object Constant {
 
     enum class Locale(val index: Int, val locale: String, val lang: String) {
         ENGLISH(PREF_LANG_ENG, "en", "en-us"),
-        KOREAN(PREF_LANG_KOR, "ko", "ko-kr")
+        KOREAN(PREF_LANG_KOR, "ko", "ko-kr"),
+        RUSSIAN(PREF_LANG_RUS, "ru", "ru-ru")
     }
 
     const val PREF_LANG_ENG = 0
     const val PREF_LANG_KOR = 1
+    const val PREF_LANG_RUS = 2
 
 
     /* ID */

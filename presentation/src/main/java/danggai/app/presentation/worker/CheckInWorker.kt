@@ -815,6 +815,7 @@ class CheckInWorker @AssistedInject constructor(
             val lang = when (preference.getStringLocale()) {
                 Constant.Locale.ENGLISH.locale -> Constant.Locale.ENGLISH.lang
                 Constant.Locale.KOREAN.locale -> Constant.Locale.KOREAN.lang
+                Constant.Locale.RUSSIAN.locale -> Constant.Locale.RUSSIAN.lang
                 else -> Constant.Locale.ENGLISH.locale
             }
 

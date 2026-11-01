@@ -274,10 +274,7 @@ object CommonFunction {
      * etc. -> 2 times
      **/
     fun convertIntToTimes(int: Int, context: Context): String {
-        return when (int) {
-            1 -> int.toString() + context.getString(R.string.time)
-            else -> int.toString() + context.getString(R.string.times)
-        }
+        return context.resources.getQuantityString(R.plurals.times_count, int, int)
     }
 
     fun isUidValidate(widgetId: Int, context: Context): Boolean {

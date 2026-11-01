@@ -122,6 +122,7 @@ class WidgetDesignCharacterAdapter(
         )) {
             Constant.Locale.ENGLISH.locale -> items[position].name_en
             Constant.Locale.KOREAN.locale -> items[position].name_ko
+            Constant.Locale.RUSSIAN.locale -> items[position].name_ru
             else -> items[position].name_en
         }
     }

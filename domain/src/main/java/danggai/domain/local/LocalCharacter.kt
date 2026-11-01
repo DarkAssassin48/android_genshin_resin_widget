@@ -11,7 +11,8 @@ data class LocalCharacter(
     val talentArea: TalentArea,
     val talentDay: TalentDate,
     val icon: Int,                          // 프로필 사진 res ID
-    var isSelected: Boolean = false
+    var isSelected: Boolean = false,
+    val name_ru: String = name_en
 ) {
     override fun equals(other: Any?): Boolean {
         return when (other) {

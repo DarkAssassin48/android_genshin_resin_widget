@@ -470,11 +470,6 @@
     <string name="clock_24">24시</string>
 
     <!-- Google Ads -->
-    <string name="google_ads_app_id">ca-app-pub-8407462596213276~4738084181</string>
-    <string name="google_ads_banner_id">ca-app-pub-8407462596213276/9798839174</string>
-
-    <string name="google_ads_test_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="google_ads_test_banner_id">ca-app-pub-3940256099942544/6300978111</string>
 
 
     <!-- 패치노트 -->
@@ -498,4 +493,7 @@
     <string name="msg_toast_how_to_relogin">만료된 계정으로 다시 로그인하면 자동으로 갱신돼요.</string>
     <string name="msg_toast_relogin_success">다시 로그인 완료! 데이터를 갱신합니다.</string>
     <string name="msg_toast_relogin_wrong_account">만료된 계정과 다른 HoYoLAB 계정입니다. 기존 계정으로 다시 로그인해주세요.</string>
+    <plurals name="times_count">
+        <item quantity="other">%d회</item>
+    </plurals>
 </resources>

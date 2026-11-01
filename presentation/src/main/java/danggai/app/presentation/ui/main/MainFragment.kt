@@ -656,13 +656,14 @@ class MainFragment : BindingFragment<FragmentMainBinding, MainViewModel>() {
                 log.e()
                 activity?.let {
                     val builder = AlertDialog.Builder(it)
-                    builder.setTitle("Change Language")
-                        .setItems(arrayOf("English", "한국어"),
+                    builder.setTitle(R.string.change_language)
+                        .setItems(arrayOf("English", "한국어", "Русский"),
                             DialogInterface.OnClickListener { dialog, which ->
                                 log.e(which)
                                 val locale: String = when (which) {
                                     Constant.Locale.ENGLISH.index -> Constant.Locale.ENGLISH.locale
                                     Constant.Locale.KOREAN.index -> Constant.Locale.KOREAN.locale
+                                    Constant.Locale.RUSSIAN.index -> Constant.Locale.RUSSIAN.locale
                                     else -> Locale.getDefault().language
                                 }
 

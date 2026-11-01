@@ -1,3 +1,18 @@
+# HoYo Assistant — русский перевод
+
+Форк для самостоятельного редактирования русской локализации. Рабочая ветка: **`russian-localization`**.
+
+- **[Как исправлять перевод](docs/LOCALIZATION_RU.md)** — редактирование через GitHub и локально, проверка и получение обновлений исходников.
+- **[Русские строки интерфейса](presentation/src/main/res/values-ru/strings.xml)**.
+- **[Русские имена персонажей](presentation/src/main/java/danggai/app/presentation/util/PlayableCharacters.kt)** — поля `name_ru`.
+- Проверка без Android SDK: `python scripts/check_localization.py`.
+
+Исходный проект: [danggai/android_genshin_resin_widget](https://github.com/danggai/android_genshin_resin_widget). Релизы и отправка изменений в исходный проект не настроены. Ветка `master` сохранена как основа исходного проекта.
+
+Для установки APK поверх версии из Google Play требуется совместимая подпись разработчика. Форк сам по себе не меняет это ограничение.
+
+---
+
 # 호요 도우미
 
 <img src="./assets/icon.png?raw=true" width="200" height="200">

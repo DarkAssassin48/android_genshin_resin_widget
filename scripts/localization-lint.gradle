@@ -1,0 +1,13 @@
+allprojects {
+    def configureLocalizationLint = {
+        android.lint {
+            checkOnly.addAll([
+                'MissingTranslation', 'ExtraTranslation',
+                'StringFormatInvalid', 'StringFormatCount', 'StringFormatMatches',
+                'MissingQuantity', 'ImpliedQuantity'
+            ])
+        }
+    }
+    plugins.withId('com.android.application') { configureLocalizationLint() }
+    plugins.withId('com.android.library') { configureLocalizationLint() }
+}
