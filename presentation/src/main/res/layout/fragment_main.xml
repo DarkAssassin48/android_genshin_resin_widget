@@ -644,46 +644,40 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:paddingHorizontal="14dp"
                         android:paddingVertical="10dp">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             style="@style/TextView"
-                            android:layout_width="wrap_content"
-                            android:layout_marginEnd="14dp"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="6dp"
                             android:text="@string/check_in"
                             android:textColor="@color/on_surface"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <com.google.android.material.chip.ChipGroup
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            app:chipSpacingHorizontal="8dp"
-                            app:chipSpacingVertical="4dp">
+                            android:orientation="horizontal">
 
                             <com.google.android.material.chip.Chip
-                                style="@style/NotiChipBlue"
+                                style="@style/NotiChipBlue.CheckIn"
+                                android:layout_marginEnd="8dp"
                                 android:checked="@={vm.sfEnableNotiCheckinSuccess}"
                                 android:text="@string/btn_check_in_success"
                                 app:chipIcon="@drawable/baseline_check_24"
                                 app:chipIconTint="@color/noti_chip_icon_tint" />
 
                             <com.google.android.material.chip.Chip
-                                style="@style/NotiChipBlue"
+                                style="@style/NotiChipBlue.CheckIn"
                                 android:checked="@={vm.sfEnableNotiCheckinFailed}"
                                 android:text="@string/btn_check_in_failed"
                                 app:chipIcon="@drawable/baseline_close_24"
                                 app:chipIconTint="@color/noti_chip_icon_tint" />
 
-                        </com.google.android.material.chip.ChipGroup>
-
-                        <android.widget.Space
-                            android:layout_width="wrap_content"
-                            android:layout_height="15dp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 

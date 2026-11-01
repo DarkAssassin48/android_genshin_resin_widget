@@ -191,6 +191,17 @@
         <item name="android:textColor">@color/noti_chip_soft_custom_text</item>
     </style>
 
+    <style name="NotiChipBlue.CheckIn" parent="NotiChipBlue">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="chipStartPadding">6dp</item>
+        <item name="chipEndPadding">6dp</item>
+        <item name="textStartPadding">6dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">0dp</item>
+    </style>
+
     <style name="NotiChipGenshin" parent="NotiChip.Soft">
         <item name="chipBackgroundColor">@color/noti_chip_soft_bg_genshin</item>
         <item name="chipStrokeColor">@color/noti_chip_soft_stroke_genshin</item>
